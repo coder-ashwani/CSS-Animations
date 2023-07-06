@@ -1,0 +1,72 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:ital@0;1&display=swap');
+  *{
+    font-family: 'Poppins', sans-serif;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(0, 0, 0);
+  }
+  .wrapper{
+    display: flex;
+  }
+
+  .wrapper .firsttext{
+    font-size: 60px;
+    color: white;
+  }
+  .wrapper .sectext{
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+  }
+
+  .sectext li{
+    position: relative;
+    top: 0;
+    font-size: 60px;
+    color: #0ef;
+    list-style: none;
+    padding: 0 20px;
+    text-shadow: 2px 1px 10px #0ef;
+    animation: slide 12s steps(4) infinite, colorful 6s infinite;
+  }
+
+  @keyframes slide {
+    100%{
+            top: -360px;
+    }
+  }
+
+  @keyframes colorful {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+  }
+
+  .sectext li span{
+    position: relative;
+  }
+
+  .sectext li span::before{
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 89px;
+    left: 0%;
+    /* background-color: red; */
+    border-left: 2px solid #0ef;
+    animation: typing 1.5s steps(10) infinite alternate;
+  }
+  @keyframes typing{
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+  }
